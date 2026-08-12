@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masum's Portfolio</title>
+  <meta name="description" content="Designing custom digital designs and building interactive web experiences. Based in India. Working worldwide." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Masum's Portfolio" />
+  <meta property="og:description" content="Designing custom digital designs and building interactive web experiences." />
+
+  <!-- Google Font: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Remix Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fullscreen Multilingual Greeting Loader -->
+  <section class="loader">
+    <div class="loader-content">
+      <h2 class="loader-text">Hello</h2>
+    </div>
+  </section>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="siteHeader">
+    <div class="logo">
+      <a href="#hero" class="logo-link">Masum Prajapati</a>
+    </div>
+
+    <button type="button" class="menu-button" id="menuToggleBtn" aria-label="Open Navigation Menu">
+      <span>Menu</span>
+      <span class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </nav>
+
+  <!-- Navigation Menu Side Drawer (50% Width, No Logo) -->
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+    <div class="menu-drawer-content">
+      <div class="menu-drawer-header">
+        <button type="button" class="menu-close-btn" id="menuCloseBtn" aria-label="Close Navigation Menu">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+      <div class="menu-overlay-content">
+        <nav class="overlay-nav-links">
+          <a href="#hero" class="overlay-nav-link">HOME</a>
+          <a href="#section-02" class="overlay-nav-link">ABOUT</a>
+          <a href="#skillsSection" class="overlay-nav-link">SKILLS</a>
+          <a href="#section03" class="overlay-nav-link">PROJECTS</a>
+          <a href="#experience" class="overlay-nav-link">EXPERIENCE</a>
+          <a href="https://github.com/masumprajapati5" target="_blank" rel="noopener" class="overlay-nav-link">RESUME / GITHUB</a>
+          <a href="#contactSection" class="overlay-nav-link">CONTACT</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Wrapper (Lifts up to reveal fixed footer) -->
+  <main class="main-wrapper">
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <!-- Hero Text Container (Title + Subtitle in a flex flow) -->
+      <div class="hero-text-container">
+        <!-- 1. Main Heading: Frontend Developer -->
+        <h1 class="hero-title">
+          <span>Frontend</span>
+          <span class="developer">Developer</span>
+        </h1>
+
+        <!-- 2. Subtitle Description -->
+        <p class="description">
+          I build clean, fast, and responsive websites
+          that look great on all devices.
+        </p>
+      </div>
+
+      <!-- 3. Developer Portrait Image -->
+      <div class="person">
+        <img
+          src="./assets/images/developer-portrait.png"
+          alt="Masum Prajapati - Frontend Developer"
+        />
+      </div>
+    </section>
+
+    <!-- GREEN SECTION (ABOUT) -->
+    <section class="green-section" id="section-02">
+      <p class="role">
+        Designer/developer
+        <span>hybrid</span>
+      </p>
+
+      <h2 class="green-title">
+        <span class="highlight">Crafted</span> with intent.<br />
+        Built for impact.
+      </h2>
+
+      <!-- CAPSULE ANIMATION BANNER (MATCHING REFERENCE DESIGN) -->
+      <div class="play-capsule-banner" id="playReelBanner">
+        <img src="./assets/images/povenlBAIz14s.webp" alt="Capsule Animation" class="capsule-media" />
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION (Unique Centered Header) -->
+    <section class="section-skills" id="skillsSection">
+      <div class="skills-header-centered">
+        <span class="skills-top-tag">Tech Stack &amp; Tools</span>
+        <h2 class="skills-main-title">Technologies I work with</h2>
+      </div>
+
+      <div class="marque-section">
+        <div class="marque-track">
+          <div class="skill-badge"><i class="ri-html5-fill"></i> HTML5</div>
+          <div class="skill-badge"><i class="ri-css3-fill"></i> CSS3</div>
+          <div class="skill-badge"><i class="ri-javascript-fill"></i> JAVASCRIPT</div>
+          <div class="skill-badge"><i class="ri-reactjs-line"></i> REACT</div>
+          <div class="skill-badge"><i class="ri-line-chart-line"></i> GSAP</div>
+          <div class="skill-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19.2 12.001 19.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"/></svg>
+            TAILWINDCSS
+          </div>
+          <div class="skill-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2H8.5C6.57 2 5 3.57 5 5.5S6.57 9 8.5 9H12V2Z"/>
+              <path d="M12 9H8.5C6.57 9 5 10.57 5 12.5S6.57 16 8.5 16H12V9Z"/>
+              <path d="M8.5 16C6.57 16 5 17.57 5 19.5S6.57 23 8.5 23 12 21.43 12 19.5V16H8.5Z"/>
+              <path d="M12 2H15.5C17.43 2 19 3.57 19 5.5S17.43 9 15.5 9H12V2Z"/>
+              <path d="M15.5 9C17.43 9 19 10.57 19 12.5S17.43 16 15.5 16 12 14.43 12 12.5V9h3.5Z"/>
+            </svg>
+            FIGMA
+          </div>
+          <div class="skill-badge"><i class="ri-git-branch-fill"></i> GIT</div>
+          <div class="skill-badge"><i class="ri-github-fill"></i> GITHUB</div>
+        </div>
+        <div class="marque-track">
+          <div class="skill-badge"><i class="ri-html5-fill"></i> HTML5</div>
+          <div class="skill-badge"><i class="ri-css3-fill"></i> CSS3</div>
+          <div class="skill-badge"><i class="ri-javascript-fill"></i> JAVASCRIPT</div>
+          <div class="skill-badge"><i class="ri-reactjs-line"></i> REACT</div>
+          <div class="skill-badge"><i class="ri-line-chart-line"></i> GSAP</div>
+          <div class="skill-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19.2 12.001 19.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"/></svg>
+            TAILWINDCSS
+          </div>
+          <div class="skill-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2H8.5C6.57 2 5 3.57 5 5.5S6.57 9 8.5 9H12V2Z"/>
+              <path d="M12 9H8.5C6.57 9 5 10.57 5 12.5S6.57 16 8.5 16H12V9Z"/>
+              <path d="M8.5 16C6.57 16 5 17.57 5 19.5S6.57 23 8.5 23 12 21.43 12 19.5V16H8.5Z"/>
+              <path d="M12 2H15.5C17.43 2 19 3.57 19 5.5S17.43 9 15.5 9H12V2Z"/>
+              <path d="M15.5 9C17.43 9 19 10.57 19 12.5S17.43 16 15.5 16 12 14.43 12 12.5V9h3.5Z"/>
+            </svg>
+            FIGMA
+          </div>
+          <div class="skill-badge"><i class="ri-git-branch-fill"></i> GIT</div>
+          <div class="skill-badge"><i class="ri-github-fill"></i> GITHUB</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (EDITORIAL 3-PROJECT STACK) -->
+    <section class="section-projects" id="section03">
+      <div class="projects-container">
+        <div class="projects-header">
+          <h2 class="works-section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-stack-list">
+          
+          <!-- Project 01: Two Leaves & a Bud -->
+          <a href="https://masumprajapati5.github.io/twoleavestea/" target="_blank" rel="noopener" class="project-stack-row">
+            <div class="project-row-left">
+              <span class="project-row-num">01</span>
+              <h3 class="project-row-title">Two Leaves &amp; a Bud</h3>
+              <span class="project-github-btn" onclick="event.stopPropagation(); window.open('https://github.com/masumprajapati5/twoleavestea', '_blank')" title="View GitHub Code">
+                <i class="ri-github-fill"></i> GitHub
+              </span>
+            </div>
+            <div class="project-row-right">
+              <div class="project-arrow-icon" aria-label="Open Project Link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 02: FinTrack Pro Dashboard -->
+          <a href="https://masumprajapati5.github.io/FinTrack-Pro/login.html" target="_blank" rel="noopener" class="project-stack-row">
+            <div class="project-row-left">
+              <span class="project-row-num">02</span>
+              <h3 class="project-row-title">FinTrack Pro Dashboard</h3>
+              <span class="project-github-btn" onclick="event.stopPropagation(); window.open('https://github.com/masumprajapati5/FinTrack-Pro', '_blank')" title="View GitHub Code">
+                <i class="ri-github-fill"></i> GitHub
+              </span>
+            </div>
+            <div class="project-row-right">
+              <div class="project-arrow-icon" aria-label="Open Project Link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 03: Task Manager App -->
+          <a href="https://masumprajapati5.github.io/Task-Manager/" target="_blank" rel="noopener" class="project-stack-row">
+            <div class="project-row-left">
+              <span class="project-row-num">03</span>
+              <h3 class="project-row-title">Task Manager App</h3>
+              <span class="project-github-btn" onclick="event.stopPropagation(); window.open('https://github.com/masumprajapati5/Task-Manager', '_blank')" title="View GitHub Code">
+                <i class="ri-github-fill"></i> GitHub
+              </span>
+            </div>
+            <div class="project-row-right">
+              <div class="project-arrow-icon" aria-label="Open Project Link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION SECTION (MINIMALIST STACK LAYOUT) -->
+    <section class="section-experience" id="experience">
+      <div class="experience-container">
+        
+        <!-- Experience Column -->
+        <div class="exp-column">
+          <h2 class="works-section-title align-left">Experience</h2>
+          <div class="exp-stack-list">
+
+            <!-- Item 1: Sheryians -->
+            <article class="exp-stack-row">
+              <div class="exp-row-top">
+                <h3 class="exp-role-title">AI Full Stack Trainee</h3>
+                <span class="exp-duration">Jun 2026 — Present</span>
+              </div>
+              <p class="exp-company-name">Sheryians Coding School • Apprenticeship</p>
+            </article>
+
+            <!-- Item 2: LaMinds -->
+            <article class="exp-stack-row">
+              <div class="exp-row-top">
+                <h3 class="exp-role-title">Web Developer</h3>
+                <span class="exp-duration">Dec 2025 — Apr 2026</span>
+              </div>
+              <p class="exp-company-name">LaMinds • Internship (Surat)</p>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Education Column -->
+        <div class="exp-column">
+          <h2 class="works-section-title align-left">Education</h2>
+          <div class="exp-stack-list">
+
+            <!-- Education Item -->
+            <article class="exp-stack-row">
+              <div class="exp-row-top">
+                <h3 class="exp-role-title">BCA (Web Development)</h3>
+                <span class="exp-duration">Jul 2023 — Apr 2026</span>
+              </div>
+              <p class="exp-company-name">Sutex Bank College • Grade 8.92</p>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- FOOTER SECTION (STATIC IN NORMAL FLOW) -->
+    <footer class="reveal-footer" id="contactSection">
+    <!-- Center Content -->
+    <div class="footer-center-content">
+      <h2 class="reveal-footer-title">
+        Let’s create<br />
+        <span class="footer-title-bottom">
+          <span class="footer-avatar-circle">
+            <img src="./assets/images/developer-portrait.png" alt="Masum Prajapati" />
+          </span>
+          <span class="highlight-lime">something</span>
+        </span>
+      </h2>
+
+      <!-- Email Block -->
+      <div class="footer-email-block">
+        <p class="footer-email-label">Drop me an email:</p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kp23410056@gmail.com" target="_blank" rel="noopener" class="footer-email-row" title="Open Gmail Composer">
+          <span class="footer-email-address">kp23410056@gmail.com</span>
+          <div class="copy-pill-btn" aria-label="Compose Gmail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Row -->
+    <div class="footer-bottom-row">
+      <span class="copyright-text">©2026</span>
+      <div class="footer-social-icons">
+        <a href="https://www.linkedin.com/in/masum-prajapati-4469072b0/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn Profile"><i class="ri-linkedin-fill"></i></a>
+        <a href="https://github.com/masumprajapati5" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub Profile"><i class="ri-github-fill"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kp23410056@gmail.com" target="_blank" rel="noopener" aria-label="Gmail" title="Send Email via Gmail"><i class="ri-mail-fill"></i></a>
+      </div>
+    </div>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
