@@ -1,11 +1,5 @@
-/* ==========================================================================
-   Masum Prajapati • Portfolio JS (Menu Overlay & GSAP Animations)
-   ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --------------------------------------------------------------------------
-  // 1. Menu Overlay Drawer Interactions
-  // --------------------------------------------------------------------------
   const menuToggleBtn = document.getElementById("menuToggleBtn");
   const menuCloseBtn = document.getElementById("menuCloseBtn");
   const menuBackdrop = document.getElementById("menuBackdrop");
@@ -44,16 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Close menu on pressing Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && menuOverlay && menuOverlay.classList.contains("active")) {
       closeMenu();
     }
   });
 
-  // --------------------------------------------------------------------------
-  // Smart Navbar Scroll Behavior (Hide on Scroll Down, Reveal on Scroll Up)
-  // --------------------------------------------------------------------------
+
   const siteHeader = document.getElementById("siteHeader");
   let lastScrollY = window.scrollY;
 
@@ -61,12 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentScrollY = window.scrollY;
     const menuOverlay = document.getElementById("menuOverlay");
 
-    // Don't hide navbar if mobile menu is open
+
     if (menuOverlay && menuOverlay.classList.contains("active")) {
       return;
     }
 
-    // Always reveal navbar at top of page
     if (currentScrollY <= 30) {
       if (typeof gsap !== "undefined" && siteHeader) {
         gsap.to(siteHeader, { yPercent: 0, opacity: 1, duration: 0.35, ease: "power2.out", overwrite: "auto" });
