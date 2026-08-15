@@ -76,15 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
     lastScrollY = currentScrollY;
   }, { passive: true });
 
-  // --------------------------------------------------------------------------
-  // 2. GSAP Animations
-  // --------------------------------------------------------------------------
+
+
   if (typeof gsap !== "undefined") {
     if (typeof ScrollTrigger !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
     }
 
-    // Initial State for Navbar, Hero & About section reveal
+
     gsap.set("#siteHeader", {
       yPercent: -110,
       opacity: 0
@@ -95,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 0
     });
 
-    // Loader Timeline: Loader -> Navbar -> Hero Section -> About Section
+
     const tl = gsap.timeline({ paused: true });
 
     tl.to(".loader", {
@@ -139,7 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power3.out",
       }, "-=0.5");
 
-    // Multilingual Greetings Sequence: Hello -> Hola -> Bonjour -> Ciao -> नमस्ते
+
+
     const greetings = ["Hello", "Hola", "Bonjour", "Ciao", "नमस्ते"];
     const loaderText = document.querySelector(".loader-text");
     let currentIndex = 0;
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // GSAP Infinite Continuous Marquee Loop
+
     if (document.querySelector(".marque-track")) {
       gsap.to(".marque-track", {
         xPercent: -100,
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Centered Skills Section Header ScrollTrigger
+
     if (document.querySelector(".skills-header-centered")) {
       gsap.from(".skills-header-centered", {
         y: 40,
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Featured Projects Stack ScrollTrigger (Stagger Reveal)
+
     if (document.querySelector(".project-stack-row")) {
       gsap.from(".project-stack-row", {
         y: 60,
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Experience & Education Section ScrollTrigger
+
     if (document.querySelector(".exp-stack-row")) {
       gsap.from(".exp-stack-row", {
         y: 60,
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // ScrollTrigger Scrub Animation for Capsule Banner
+
     if (document.querySelector("#playReelBanner")) {
       gsap.fromTo("#playReelBanner",
         { scale: 0.05, opacity: 0.8},
