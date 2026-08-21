@@ -273,7 +273,6 @@ video {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  /* font-size: clamp(14px, 1.5vw, 18px); */
 }
 
 .menu-close-btn {
