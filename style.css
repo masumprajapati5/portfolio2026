@@ -273,7 +273,6 @@ video {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  /* color: var(--bg); */
 }
 
 .menu-close-btn {
@@ -330,6 +329,7 @@ video {
 
 .overlay-nav-link:hover {
   opacity: 0.7;
+  /* background-color: var(--font-bold); */
 }
 
 .menu-overlay.active .overlay-nav-link {
@@ -406,6 +406,7 @@ video {
   display: block;
   white-space: nowrap;
   text-align: center;
+  /* background-color: var(--font-bold); */
 }
 
 .hero-title .developer {
